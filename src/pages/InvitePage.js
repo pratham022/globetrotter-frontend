@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/InvitePage.css";
+import { PROD_BASE_URL } from "../constants";
 
 const InvitePage = () => {
     const { inviteCode } = useParams();
@@ -11,7 +12,7 @@ const InvitePage = () => {
     useEffect(() => {
         const fetchInviteDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/invite/${inviteCode}`);
+                const response = await fetch(`${PROD_BASE_URL}/api/invite/${inviteCode}`);
                 const data = await response.json();
 
                 if (response.ok) {

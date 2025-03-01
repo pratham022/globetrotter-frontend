@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchQuizQuestion, submitAnswer } from "../api/quizApi";
 import "../styles/Quiz.css";
 import FinalScore from "./FinalScore";
+import { PROD_BASE_URL } from "../constants";
 
 function Quiz() {
     const [questionData, setQuestionData] = useState(null);
@@ -75,7 +76,7 @@ function Quiz() {
         const username = localStorage.getItem("username");
         if (username) {
             try {
-                const response = await fetch("http://localhost:5000/api/users/update-score", {
+                const response = await fetch(`${PROD_BASE_URL}/api/users/update-score`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ username: username, score: score })

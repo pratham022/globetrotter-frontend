@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
+import { PROD_BASE_URL } from "../constants";
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
     const [username, setUsername] = useState(localStorage.getItem("username") || "");
@@ -10,7 +11,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         if (!inputUsername.trim()) return;
 
         try {
-            const response = await fetch("http://localhost:5000/api/users/register", {
+            const response = await fetch(`${PROD_BASE_URL}/api/users/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username: inputUsername }),
@@ -26,7 +27,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
                 const guestScore = localStorage.getItem("guestScore");
                 if (guestScore) {
                     try {
-                        const response = await fetch("http://localhost:5000/api/users/update-score", {
+                        const response = await fetch(`${PROD_BASE_URL}/api/users/update-score`, {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ username: inputUsername, score: parseInt(guestScore) })
@@ -56,7 +57,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/invite/create", {
+            const response = await fetch(`${PROD_BASE_URL}/api/invite/create`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username }),
