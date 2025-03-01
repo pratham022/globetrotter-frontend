@@ -1,0 +1,52 @@
+.final-score-container {
+    width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.final-score-title {
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.final-score {
+    font-size: 22px;
+    color: #1e90ff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.final-message {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.restart-button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #2ed573; /* Green restart button */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.restart-button:hover {
+    background-color: #1faa59;
+    transform: scale(1.05);
+}

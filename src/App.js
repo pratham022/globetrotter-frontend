@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import InvitePage from "./pages/InvitePage";
+import Quiz from "./pages/Quiz";
+import Navbar from "./components/Navbar";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("username")); 
+    return (
+        <Router>
+            <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <Routes>
+                <Route path="/" element={<Quiz />} />
+                <Route path="/api/invite/:inviteCode" element={<InvitePage />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

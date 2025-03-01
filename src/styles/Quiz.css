@@ -1,0 +1,183 @@
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 14px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.loading-text, .error-text {
+    font-size: 16px;
+    color: #ff4757;
+    font-weight: bold;
+}
+
+.clue-list {
+    list-style: none;
+    padding: 0;
+}
+
+.clue-item {
+    background: #dfe4ea;
+    color: #2f3542;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.clue-button {
+    margin: 6px 0;
+    padding: 8px 14px;
+    font-size: 14px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.clue-button:hover {
+    background: #0a74da;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.option-button {
+    padding: 12px;
+    font-size: 14px;
+    background: #f1f2f6;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option-button:hover {
+    background: #dcdde1;
+}
+
+.option-button.selected {
+    background: #2ed573;
+    color: white;
+    border-color: #1e90ff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-button, .next-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.next-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.result {
+    margin-top: 12px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+.result-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.correct {
+    color: #2ed573;
+}
+
+.wrong {
+    color: #ff4757;
+}
+
+.result p {
+    margin: 8px 0;
+}
+
+.info-section {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.info-section h3 {
+    font-size: 14px;
+    color: #1e90ff;
+    margin-top: 10px;
+}
+
+.info-list {
+    padding: 0;
+    list-style: none;
+}
+
+.info-list li {
+    background: #dfe4ea;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+}
+
+.finish-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ff6348; /* A distinct color to differentiate */
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.finish-button:hover {
+    background-color: #e74c3c;
+}
+
+.finish-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
