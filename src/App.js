@@ -11,7 +11,7 @@ function App() {
             <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <Routes>
                 <Route path="/" element={<Quiz />} />
-                <Route path="/api/invite/:inviteCode" element={<InvitePage />} />
+                <Route path="/invite/:inviteCode" element={<InvitePage />} />
             </Routes>
         </Router>
     );
