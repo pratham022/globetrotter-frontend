@@ -1,6 +1,6 @@
 # 🌍 The Globetrotter Challenge - Frontend  
 
-This is the **frontend** of the "Guess the Destination" game, a fun quiz-based game where players guess locations based on clues.  
+This is the **frontend** of the "The Globetrotter Challenge" game, a fun quiz-based game where players guess locations based on clues.  
 
 ## 🚀 Tech Stack  
 - **Framework:** React.js  
